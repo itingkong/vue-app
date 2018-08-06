@@ -1,0 +1,36 @@
+@import "assets/reset.scss";
+@import "assets/theme.scss";
+
+.common {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+$l-100: 100%; 
+
+@mixin flex-sb-fs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@mixin flex-sb-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-sa-fs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+@mixin flex-sa-c {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+$lh-36: 36px;
