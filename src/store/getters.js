@@ -1,0 +1,1 @@
+export const modeProp = state => state.modeProp

@@ -34,3 +34,24 @@ $l-100: 100%;
 }
 
 $lh-36: 36px;
+
+.form-item-content {
+	position: relative;
+	margin-bottom: 20px;
+	.handle {
+		height: 10px;
+		width: 40px;;
+		position: absolute;
+		top: -5px;
+		right: 5%;
+		display: flex;
+		z-index: 9;
+		span {
+			width: 20px;
+			height: 10px;
+			line-height: 10px;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+}

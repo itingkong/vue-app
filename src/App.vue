@@ -1,24 +1,26 @@
 <template>
-    <div id="app">
-			<div class="common main">
-        <Sidebar></Sidebar>
-				<new-form></new-form>
-			</div>
-    </div>
+	<div id="app">
+		<div class="common main">
+			<Sidebar></Sidebar>
+			<new-form></new-form>
+			<Editor></Editor>
+		</div>
+	</div>
 </template>
 
 <script>
-    // import HelloWorld from '@/components/HelloWorld'
-    import Sidebar from 'components/sidebar/sidebar'
-    import newForm from 'components/newForm/newForm'
+import Sidebar from 'components/sidebar/sidebar'
+import newForm from 'components/newForm/newForm'
+import Editor from 'components/editor/editor'
 
-    export default {
-        name: 'App',
-        components: { 
-					Sidebar,
-					newForm
-				}
-    }
+export default {
+		name: 'App',
+		components: { 
+			Sidebar,
+			newForm,
+			Editor
+		}
+}
 </script>
 
 <style lang="scss" scoped>
