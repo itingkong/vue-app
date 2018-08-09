@@ -5,7 +5,10 @@
       <span class="delete" @click="del"><i class="iconfont icon-delete"></i></span>
     </div>
     <el-form-item :label="data.lable" :prop="data.prop">
-      <el-input></el-input>
+      <el-select v-model="data" placeholder="请选择活动区域">
+        <el-option label="区域一" value="shanghai"></el-option>
+        <el-option label="区域二" value="beijing"></el-option>
+      </el-select>
     </el-form-item>
   </div>
 </template>
@@ -16,19 +19,18 @@ export default {
   data() {
     return {
       data: {
-        lable: '标签名',
+        lable: '活动区域',
         text: '',
         prop: '',
-        index: 1
+        index: 2
       }
     }
   },
   mounted() {
     Bus.$on('form', res => {
       if(res.index == this.data.index){
-        console.log('res====>' +res)
-        console.log(this.data.index)
         this.data = res
+        console.log('sele'+ res)
         Bus.$emit('push', res)
       }
     })
@@ -36,7 +38,7 @@ export default {
   methods: {
     set(e) {
       Bus.$emit('set', this.data)
-      console.log(e.target.nodeName)
+      console.log(e.target.innerText)
     },
     del() {
       console.log('delete')
@@ -47,5 +49,9 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~assets/common.styl'
+.el-form-item__content
+  .el-select 
+    width 100%
+  
 
 </style>

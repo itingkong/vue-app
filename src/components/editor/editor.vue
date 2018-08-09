@@ -41,21 +41,21 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import 'assets/common.scss';
+<style lang="stylus" scoped>
+@import '~assets/common.styl'
 
 .edit-wrap {
-  width: 20%;
-  height: 100%;
-  border: 1px solid $color;
-  border-radius: 4px;
-  padding: 10px 5px;
+  width 20%
+  height 100%
+  border 1px solid $color
+  border-radius 4px
+  padding: 10px 5px
   .el-form-item {
-    margin-bottom: 10px;
+    margin-bottom 10px
   }
 
   .btn {
-    margin-top: 10px;
+    margin-top 10px
   }
 }
 </style>
